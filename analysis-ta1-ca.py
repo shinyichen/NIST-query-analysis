@@ -34,7 +34,7 @@ th, td {
 '''
 
 if not os.path.exists(out_dir):
-    os.mkdir(out_dir)
+    os.makedirs(out_dir, exist_ok=True)
 
 with ZipFile(corpus_file) as corpus_zipfile:
 
